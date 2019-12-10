@@ -32,22 +32,24 @@ def double(n: int) -> int:
 
 End example
 ---
-### double_23
-Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
 
+## Example:
+### same_first_last
+Given an array of ints, return True if the array is length 1 or more, 
+and the first element and the last element are equal
 ```
-double_23([2, 2]) → true
-double_23([3, 3]) → true
-double_23([2, 3]) → false
+same_first_last([1, 2, 3]) → False
+same_first_last([1, 2, 3, 1]) → True
+same_first_last([1, 2, 1]) → True
 ```
 Solutions:
 
 ```python
-def double_23(list_1: list) -> bool:
-    if list_1[0] == 2 and list_1[1] == 2:
-        return True
-    elif list_1[0] == 3 and list_1[1] == 3:
-        return True
-    else:
-        return False
+def same_first_last(nums: list) -> boolean:
+  if len(nums) >= 1 and nums[0] == nums[len(nums)-1]:
+    return True
+  else:
+    return False
 ```
+
+
